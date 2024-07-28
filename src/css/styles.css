@@ -1,12 +1,4 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +14,153 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+}
+
+p {
+  font-size: 12px;
+  line-height: 2;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 8px;
+  margin-bottom: 40px;
+  max-height: 40px;
+}
+
+.input-field {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+
+  padding: 10px;
+}
+
+.input-field::placeholder {
+  color: #808080;
+}
+
+.input-field:hover {
+  border: 1px solid #000;
+}
+
+.input-field:focus-within {
+  border: 1px solid #4e75ff;
+  border-color: #4e75ff;
+}
+
+.search-form button {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #fff;
+  font: inherit;
+  font-weight: 500;
+}
+
+.search-form button:hover {
+  background-color: #6c8cff;
+}
+
+.gallery-result-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1128px;
+  justify-content: center;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.list-container {
+  border: 1px solid #808080;
+  width: 360px;
+  height: 200px;
+}
+
+.image-container {
+  border: none;
+  object-fit: cover;
+  max-width: 100%;
+  height: 152px;
+  overflow: hidden;
+}
+
+.image-container img {
+  cursor: pointer;
+}
+
+.descr-list {
+  display: flex;
+  text-align: center;
+  gap: 32px;
+  padding: 4px 16px 4px 16px;
+  list-style: none;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.spinner {
+  --size: 50px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 2px solid black;
+  border-top: 2px solid white;
+  animation: spin 0.5s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+.loading-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.query-word {
+  font-weight: 600;
+}
+
+.query-text {
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.disabled {
+  display: none;
 }
